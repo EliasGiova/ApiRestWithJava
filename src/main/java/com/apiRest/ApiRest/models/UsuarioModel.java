@@ -4,12 +4,8 @@
  */
 package com.apiRest.ApiRest.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 
 /**
  *
@@ -28,6 +24,15 @@ public class UsuarioModel {
     private String email;
     private Integer prioridad;
 
+    public UsuarioModel() {
+    }
+
+    public UsuarioModel(Long id, String nombre, String email, Integer prioridad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.prioridad = prioridad;
+    }
 
     public Long getId() {
         return id;
